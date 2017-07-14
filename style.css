@@ -1,0 +1,9 @@
+body {
+  background-color: #fff;
+  background-size: cover;
+  font-family: 'Poppins', sans-serif;
+}
+
+input, label {
+  color: #fff;
+}
