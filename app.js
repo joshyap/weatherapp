@@ -2,7 +2,7 @@
 var key = "&APPID=f783ba9308efeb9e01d56eb94f52a926&units=imperial";
 var searchTerm = "";
 
-var baseQueryURL = "http://api.openweathermap.org/data/2.5/weather?q=";
+var baseQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=";
 var fullURL = "";
 
 
