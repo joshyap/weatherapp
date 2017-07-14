@@ -17,15 +17,25 @@ $(document).ready(function() {
 function updateTerm() {
   searchTerm = $('#cityTerm').val();
   fullURL = baseQueryURL + searchTerm + key;
+}
 
+function checkBlank() {
+  // if (!$.trim($('#cityTerm')).length > 0) {
+  if ($('#cityTerm').val() == "") {
+    $('#resultsContainer').css("visibility", "hidden");
+    console.log($('#cityTerm'));
+    return (alert('Please enter a valid search term.'));
+  } else {
+    updateTerm();
+    $('#resultsContainer').css("visibility", "visible");
+  }
 }
 
 function runQuery() {
-    updateTerm();
+  checkBlank();
 
     // console.log(searchTerm);
-
-    $('#resultsContainer').css("visibility", "visible");
+    // $('#resultsContainer').css("visibility", "visible");
 
     $.ajax({
       url: fullURL,
@@ -96,7 +106,7 @@ function runQuery() {
 
         $("#cityTerm").val("");
 
-        $('#resultsSection').addClass("card blue-grey darken-1 card-content white-text");
+        // $('#resultsSection').addClass("card blue-grey darken-1 card-content white-text");
 
     });
 
