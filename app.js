@@ -2,8 +2,8 @@
 var key = "&APPID=f783ba9308efeb9e01d56eb94f52a926&units=imperial";
 var searchTerm = "";
 
-// var baseQueryURL = "http://api.openweathermap.org/data/2.5/weather?q=";
-var baseQueryURL = "http://cors.io/?http://api.openweathermap.org/data/2.5/weather?q=";
+var baseQueryURL = "http://api.openweathermap.org/data/2.5/weather?q=";
+// var baseQueryURL = "http://cors.io/?http://api.openweathermap.org/data/2.5/weather?q=";
 
 var fullURL = "";
 
@@ -34,10 +34,11 @@ function checkBlank() {
 }
 
 function runQuery() {
-  checkBlank();
 
-    // console.log(searchTerm);
-    // $('#resultsContainer').css("visibility", "visible");
+  checkBlank();
+console.log(fullURL);
+    console.log(searchTerm);
+    $('#resultsContainer').css("visibility", "visible");
 
     $.ajax({
       url: fullURL,
@@ -52,10 +53,10 @@ function runQuery() {
       console.log(results);
       console.log("------------------------------------");
 
-      // console.log(results.main.humidity);
+      console.log(results.main.humidity);
 
-      // var weatherResults = $("<div>");
-      // weatherResults.addClass("card blue-grey darken-1");
+      var weatherResults = $("<div>");
+      weatherResults.addClass("card blue-grey darken-1");
 
       $('#resultsSection').empty();
 
@@ -108,7 +109,7 @@ function runQuery() {
 
         $("#cityTerm").val("");
 
-        // $('#resultsSection').addClass("card blue-grey darken-1 card-content white-text");
+        $('#resultsSection').addClass("card blue-grey darken-1 card-content white-text");
 
     });
 
