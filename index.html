@@ -36,7 +36,7 @@
           <!-- <div class="card-action"> -->
           <!-- <a class="waves-effect waves-light btn pulse" id="buttonSearch" onclick="triggerSearch"><i class="material-icons right">cloud</i>button</a> -->
           <!-- <button onclick="triggerSearch()">Search</button> -->
-          <button class="btn waves-effect waves-light" type="submit" name="action" onclick="runQuery()">Search</button>
+          <button class="btn waves-effect waves-light" type="submit" name="action" id="searchButton" onclick="runQuery()">Search</button>
           <!-- </div> -->
         </div>
 
@@ -62,6 +62,18 @@
   </div>
 
 </div>
+
+<script>
+document.getElementById("cityTerm")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode == 13) {
+      console.log('search button triggered');
+        document.getElementById("searchButton").click();
+    }
+});
+</script>
+
 
 <!-- <button onclick="functionTest()">test button</button>
 <script>
