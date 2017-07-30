@@ -42,7 +42,7 @@ function runQuery() {
   checkBlank();
 console.log(fullURL);
     console.log(searchTerm);
-    $('#resultsContainer').css("visibility", "visible");
+    // $('#resultsContainer').css("visibility", "visible");
 
     $.ajax({
       url: fullURL,
