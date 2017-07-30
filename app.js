@@ -1,6 +1,6 @@
 // setup variables
-var key = "ae335a32143e83f692d46f10f14e0b00"; //this is a darksky api key
-//var key = "&APPID=f783ba9308efeb9e01d56eb94f52a926&units=imperial";
+//var key = "ae335a32143e83f692d46f10f14e0b00"; //this is a darksky api key
+var key = "&APPID=f783ba9308efeb9e01d56eb94f52a926&units=imperial";
 var searchTerm = "";
 
 
